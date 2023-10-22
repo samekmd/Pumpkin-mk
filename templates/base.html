@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pumpkin mk</title>
     <link rel="stylesheet" href="{{url_for('static',filename='./estilo.css')}}">
-    <link rel="stylesheet" href="{{url_for('static',filename='./bootstrap.css')}}">
+   
 
 </head>
 <body>
-     <nav class="menu_nav">
+     <nav id="menu_nav">
+              <div class="links">
+                <a  href="/">Home</a>
+                <a  href="/Comece">Comece</a>
+                <a  href="/Consultoria">Consultoria</a>
+                <a id="button_login" href="/Login">Login</a>
+             </div>
+            
               
-                <a id="button_home" href="/">Home</a>
-                <a id="button_comece" href="comece.html">Comece</a>
-                <a id="button_consultoria" href="consultoria.html">Consultoria</a>
-                <a id="button_login" href="login.html">Login</a>
      </nav>
                 
    

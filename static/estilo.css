@@ -10,13 +10,25 @@ body{
     flex-wrap: nowrap;
     justify-content: center;
 }
-.menu_nav{
-    display: flex;
+#menu_nav{
+    
+     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: right;
-    
-    padding-right: 20%;
-     border: 0px solid red;
+    justify-content: center;
+    padding: 0;
+    background-color: black;
+    border: 0px solid red; 
+
+}
+#menu_nav a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.links{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    border: 0px solid red; 
 }
 
