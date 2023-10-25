@@ -29,18 +29,22 @@ body{
 #menu_nav a{
     text-decoration: none;
     color: #ffffff;
-    display: inline-block;
-    line-break: 20%;
-    
 }
 .links{
     width: 50%;
-    
+    height: 10%;
     display: flex;
     justify-content: space-between;
-    
+    flex-direction: row;
+    margin-right: 10%;
+    margin-top: 1.5%;
     border: 0px solid red; 
 }
+.link_bootstrap{
+ margin-top: 0.9%;
+}
+
+
 
 /* Botão Bootstrap */
 .btn {
@@ -68,7 +72,7 @@ body{
     color: var(--bs-btn-color);
     text-align: center;
     text-decoration: none;
-    vertical-align: middle;
+     vertical-align: middle; 
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -124,7 +128,7 @@ body{
 .btn-secondary {
     /* background-color:#ffa500 ; */
     --bs-btn-color: #fff;
-    --bs-btn-bg: #ffa500;
+    --bs-btn-bg: #ffa500 ;
     --bs-btn-border-color: #6c757d;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #5c636a;
@@ -139,6 +143,14 @@ body{
     --bs-btn-disabled-border-color: #fff !important;
   }
 
-/* Fim */
+/* Começo do Logo */
+
+#logo img{
+  width: 10% ;
+  }
+  /* Fim do logo */
+
+/* Fim do menu*/
+
 
 

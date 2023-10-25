@@ -5,23 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pumpkin mk</title>
     <link rel="stylesheet" href="{{url_for('static',filename='./estilo.css')}}">
-   
+    <script type="text/javascript" src="../static/script.js" ></script>
 
 </head>
 <body>
      <nav id="menu_nav">
+              <div id="logo">
+                <img class="imagem_logo" src="../static/imagens/pumpkin-halloween-spooky-scary.png" alt="Pumpkin Mk">
+              </div>
+             
               <div class="links">
                 <a  href="/">Home</a>
                 <a  href="/Comece">Comece</a>
                 <a  href="/Consultoria">Consultoria</a>
+               </div> 
+              <div class="link_bootstrap">
                 <a href="/Login "> <button type="button"  class="btn btn-secondary">Login</button>  </a>
-             </div>
+              </div>
             
               
      </nav>
                 
    
-  
+  <main class="main">
+  {% block main %}
+  {% endblock %}
+  </main>
 
     
 </body>
