@@ -17,8 +17,16 @@ function  proximaImg(){
      if(cont > 3){
         cont = 1
      }
+     
+
+
+     
 
      document.getElementById("radio"+cont).checked = true
+
+   
+
+
 
 }
 
