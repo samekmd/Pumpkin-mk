@@ -37,15 +37,17 @@ function  proximaImg(){
 
 //Inicio do Carousel Vertical
 
-var radio = document.querySelector('btn btn-outline-danger')
-var cont = 1
-document.getElementById("vbtn-radio1").checked = true
+const radioButtons = document.querySelectorAll('.btn-check');
+radioButtons.forEach((radioButton, index) => {
+    radioButton.addEventListener('change', () => {
+        // Oculte todos os cartões
+        document.querySelectorAll('.card-box_bio').forEach(card => {
+            card.style.display = 'none';
+        });
 
-function  proximaImg_Vertical(){
-   cont++
+        // Exiba o cartão correspondente ao botão clicado
+        const card = document.getElementById(`card${index + 1}`);
+        card.style.display = 'block';
+    });
+});
 
-   if(cont > 3){
-      cont = 1
-   }
-   document.getElementById("radio"+cont).checked = true
-}

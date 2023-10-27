@@ -31,7 +31,7 @@
 
 <section class="comece_botao">
         <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
-             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1 " autocomplete="off" checked> 
+             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked> 
                 <label class="btn btn-outline-danger" for="vbtn-radio1"> 1</label>
              <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
                 <label class="btn btn-outline-danger" for="vbtn-radio2"> 2</label>
@@ -47,17 +47,46 @@
 
 <div class="cards_slides">
         
-        <div class="card-box_bio primeiro">
+        <div class="card-box_bio primeiro" id="card1">
             <div class="card_bio"><h1>SLIDE 1</h1></div>
         </div>
 
-        <div class="card-box_bio">
+        <div class="card-box_bio" id="card2">
             <div class="card_bio_meio" id="card_bio_2"><h1>SLIDE 2</h1></div>
         </div>
 
-        <div class="card-box_bio">
+        <div class="card-box_bio" id="card3">
             <div class="card_bio"><h1>SLIDE 3</h1></div>
         </div>
+
+        <script>
+            const radioButtons = document.querySelectorAll('.btn-check');
+radioButtons.forEach((radioButton, index) => {
+    radioButton.addEventListener('change', () => {
+        // Oculte todos os cartões
+        document.querySelectorAll('.card-box_bio').forEach(card => {
+            card.style.display = 'none';
+        });
+
+        // Exiba o cartão correspondente ao botão clicado
+        const card = document.getElementById(`card${index + 1}`);
+        card.style.display = 'block';
+    });
+});
+
+        </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Oculte todos os cartões, exceto o cartão com id "card1"
+        document.querySelectorAll('.card-box_bio').forEach(card => {
+            card.style.display = 'none';
+        });
+    
+        const card1 = document.getElementById('card1');
+        card1.style.display = 'block';
+    });
+    </script>
 
 </div>
 
