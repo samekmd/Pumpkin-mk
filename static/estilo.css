@@ -274,7 +274,7 @@ section.slider{
 
 
 /* Inicio da Página comece */
-.comece_conteudo{
+.comece_header{
   margin: 0 auto;
   width: 100%;
   height: auto;
@@ -301,6 +301,133 @@ section.slider{
   color: #fff;
  
 }
+
+.geral
+{
+  display: flex;
+  float: left;
+  flex-direction: row;
+  margin-top: 7%;
+  gap: 120px;
+ 
+}
+
+.comece_card{
+  width: 40%;
+}
+
+.comece_botao{
+  width: 20%;
+
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+
+.cards_slides{
+  margin-left: 5%;
+}
+/* Carousel Vertical */
+
+.card-box_bio{
+  width: 25%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  transition: 1s;
+
+}
+
+.card_bio
+{
+  background-color: #E85D04;
+  width: 700px;
+  height: 400px;
+  border-radius: 10px;
+  border: 2px solid #03071E;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_bio_meio{
+  background-color: #9D0208;
+  height: 400px;
+  width: 700px;
+  border-radius: 10px;
+  border: 2px solid #03071E;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.slide_meio{
+  background-color: #9D0208;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.slider-content input{
+  display: none;
+}
+
+
+.slider-content{
+  width: 400%;
+  height: auto;
+  display: flex;
+}
+
+.slider-content input{
+  display: none;
+}
+
+.slide-box{
+  width:25%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  transition: 1s;
+}
+
+/* .slide-box img{
+  width: 100%;
+  background-color: blue;
+} */
+.slide
+{
+  background-color: #E85D04;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide_meio{
+  background-color: #9D0208;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* Fim do Carousel */
 
 
 
@@ -535,32 +662,22 @@ section.slider{
   --bs-btn-disabled-border-color: #dc3545;
   --bs-gradient: none;
 }
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+.btn-check[disabled] + .btn, .btn-check:disabled + .btn {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.65;
+}
 
 
 
 /* Fim do Botões verticais Bootstrap */
 
-/* Div dos Biotipos */
- .card_botao_biotipos{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 10px;
-  padding: 10px;
 
-} 
-
-
-.item_1{
-  grid-row: 1 / 4;
-}
-
-.item_2{
-  margin-top: 20%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-/* Fim da Div dos Biotipos */
 
 
 /* Fim da página comece  */
