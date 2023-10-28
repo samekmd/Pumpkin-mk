@@ -3,6 +3,7 @@
 
 
 {% block main %}
+<head> <script type="text/javascript" src="../static/dropdown.js" defer></script></head>
 
 <section class="comece_header">
     
@@ -16,12 +17,69 @@
 <br>
 <br>
 <hr>
+<div class="geral_comece">
 
-<section class="comece_drop">
+    <section class="comece_drop">
     
-   
+    <div class="custom-dropdown">
+        <button class="dropdown-toggle" id="dropdownButton" type="button" onclick="toggleMenu()">
+            Descubra Mais!
+        </button>
+        <ul class="custom-dropdown-menu" id="dropdownMenu">
+            <li><a class="dropdown-item"  onclick="showSection('conteudo_instrutores_dropdown')">Instrutores</a></li>
+            <li><a class="dropdown-item"  onclick="showSection('comece_cursos_dropdown')">Cursos</a></li>
+            <li><a class="dropdown-item"  onclick="showSection('comece_consultoria_dropdown')">Consultoria</a></li>
+        </ul>
+    </div>
 
+    <section class="conteudo-dropdown" id="conteudo_instrutores_dropdown">
+        <div class="comece_instrutores">
+            Olá
+        </div>
+    </section>
 
+    <section class="conteudo-dropdown" id="comece_cursos_dropdown">
+        <div class="comece_cursos">
+            Tudo
+        </div>
+    </section>
 
-</section>
+    <section class="conteudo-dropdown" id="comece_consultoria_dropdown">
+        <div class="comece_consultoria">
+            Bem?
+        </div>
+    </section>
+
+    <script>
+       // Esconder todas as seções, exceto a primeira
+    document.addEventListener('DOMContentLoaded', function () {
+        var sections = document.querySelectorAll('.conteudo-dropdown');
+        for (var i = 1; i < sections.length; i++) {
+            sections[i].style.display = 'none';
+        }
+    });
+
+    function toggleMenu() {
+        var dropdownMenu = document.querySelector('.custom-dropdown-menu');
+        dropdownMenu.classList.toggle('show');
+    }
+
+    function showSection(sectionId) {
+        // Esconder todas as seções de conteúdo
+        var sections = document.querySelectorAll('.conteudo-dropdown');
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].style.display = 'none';
+        }
+
+        // Mostrar a seção desejada
+        var selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+        }
+    }
+        
+    </script>
+
+</div>
+
 {% endblock %}
