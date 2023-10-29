@@ -27,58 +27,163 @@
         </button>
         <ul class="custom-dropdown-menu" id="dropdownMenu">
             <li><a class="dropdown-item"  onclick="showSection('conteudo_instrutores_dropdown')">Instrutores</a></li>
-            <li><a class="dropdown-item"  onclick="showSection('comece_cursos_dropdown')">Cursos</a></li>
-            <li><a class="dropdown-item"  onclick="showSection('comece_consultoria_dropdown')">Consultoria</a></li>
+            <li><a class="dropdown-item"  onclick="showSection('comece_referencias_dropdown')">Referencias</a></li>
+            
         </ul>
     </div>
-
-    <section class="conteudo-dropdown" id="conteudo_instrutores_dropdown">
-        <div class="comece_instrutores">
-            Olá
-        </div>
     </section>
 
-    <section class="conteudo-dropdown" id="comece_cursos_dropdown">
-        <div class="comece_cursos">
-            Tudo
-        </div>
-    </section>
+    <div class="comece_conteudo_geral">
+    
+        <section class="conteudo-dropdown" id="conteudo_instrutores_dropdown">
+            <div class="search-box">
+                  <input type="text" class="search-txt" placeholder="Pesquisar">
+                  <a href="#" class="search-btn">
+                    <img src="../static/imagens/loupe.png" alt="Lupa" height="20px" width="20px" >
+                  </a>
+            </div>
+            <br>
+            
+            <div class="comece_instrutores">
+               
+                <div class="foto_perfil">
+                    <img src="../static/imagens/2098873.svg" alt="Foto de Perfil"  width="100px" height="100px">
+               </div>
 
-    <section class="conteudo-dropdown" id="comece_consultoria_dropdown">
-        <div class="comece_consultoria">
-            Bem?
-        </div>
-    </section>
+              
+                   <div class="sobre_instrutores_title">
+                   
+                    <h3>
+                         Sobre mim
+                    </h3>
+                   
+                   </div> 
+                    
+                   <div class="sobre_instrutores_cont">
+                    <p>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quas sequi aliquid hic consectetur asperiores voluptas, suscipit esse sunt nemo eaque magnam repellat vitae maiores eligendi fuga vel consequatur tempore.
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ex a nisi expedita sint quis nam, cupiditate doloremque nemo ullam, magni iusto dolore eligendi eum consectetur mollitia. Odit, voluptate fugit!Lorem
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae animi deserunt odit libero, porro laborum, placeat eaque voluptatibus recusandae unde voluptate? Blanditiis aliquam facilis delectus quia illum porro. Minus, sed? Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consequatur quisquam blanditiis, temporibus odit qui quibusdam! Cum, in rem maxime consectetur et ea nihil dignissimos voluptatibus accusamus. Quaerat, debitis sapiente!
+                    </p>
 
-    <script>
-       // Esconder todas as seções, exceto a primeira
-    document.addEventListener('DOMContentLoaded', function () {
-        var sections = document.querySelectorAll('.conteudo-dropdown');
-        for (var i = 1; i < sections.length; i++) {
-            sections[i].style.display = 'none';
-        }
-    });
+                </div>
 
-    function toggleMenu() {
-        var dropdownMenu = document.querySelector('.custom-dropdown-menu');
-        dropdownMenu.classList.toggle('show');
-    }
+                <div class="comece_botoes">
 
-    function showSection(sectionId) {
-        // Esconder todas as seções de conteúdo
-        var sections = document.querySelectorAll('.conteudo-dropdown');
-        for (var i = 0; i < sections.length; i++) {
-            sections[i].style.display = 'none';
-        }
+                    <a class="intrutores-btn" href="#">Consultoria</a>
+                    <a class="intrutores-btn" href="#">Cursos</a>
+                
 
-        // Mostrar a seção desejada
-        var selectedSection = document.getElementById(sectionId);
-        if (selectedSection) {
-            selectedSection.style.display = 'block';
-        }
-    }
-        
-    </script>
+                </div>
+           
+            </div>
+       
+        </section>
+
+        <section class="conteudo-dropdown" id="comece_referencias_dropdown">
+
+            <div class="referencias_botoes_ref">
+
+                <a class="referencias-btn" href="#card_renato">Renato Cariani</a>
+                <a class="referencias-btn" href="#card_julio">Julio Balestrin</a>
+            
+
+            </div>
+            
+            <div class="comece_referencias_renato" id="card_renato">
+                <div class="foto_perfil_renato">
+                    <img src="../static/imagens/Renato_Cariani.jpg" alt="Renato Cariani"  width="200px" height="200px">
+               </div>
+
+              
+                   <div class="sobre_referencias_title">
+                   
+                    <h3>
+                         Sobre 
+                    </h3>
+                   
+                   </div> 
+                    
+                   <div class="sobre_referencias_cont">
+                    <p>
+                        
+                        Renato Cariani é um profissional altamente respeitado e experiente em sua área, conhecido por sua paixão, comprometimento e habilidades de liderança. Com uma sólida trajetória profissional, ele se destaca por suas contribuições significativas para o desenvolvimento e avanço de sua área de atuação.
+                    </p>
+                        Sua capacidade de comunicação eficaz e habilidades interpessoais fazem dele um colaborador valioso em equipes de projetos desafiadores. Além disso, Renato é um mentor dedicado, inspirando e orientando outros profissionais em sua jornada de crescimento profissional.
+                    <p>   
+                        No âmbito pessoal, Renato é admirado não apenas por sua competência profissional, mas também por suas qualidades pessoais, como empatia, respeito e integridade. Ele é conhecido por enfrentar desafios com determinação e por sua constante busca de conhecimento e aprimoramento.
+                    </p> 
+                    <p>   
+                        Renato Cariani é uma referência respeitável em sua área, cujo comprometimento com a excelência e sua influência positiva na profissão e na comunidade o tornam uma fonte de inspiração para outros profissionais em busca do sucesso e do crescimento contínuo.
+                    </p>
+
+                </div>
+
+                <div class="referencia_renato_botao">
+                    <a class="btn-renato" href="https://www.youtube.com/Renato Cariani"> <img src="../static/imagens/youtube_icon.svg" alt="Yotube" width="70px" height="70px" ></a>
+                </div>
+            
+            </div>
+
+            <div class="comece_referencias_julio" id="card_julio">
+
+            
+                    <div class="foto_perfil_julio">
+                        <img src="../static/imagens/Julio_balestrin.jpg" alt="Julio Balestrin"  width="200px" height="200px">
+                   </div>
+    
+                  
+                       <div class="sobre_referencias_title">
+                       
+                        <h3>
+                             Sobre 
+                        </h3>
+                       
+                       </div> 
+                        
+                       <div class="sobre_referencias_cont">
+                        <p>
+                            
+                            
+                                Julio Balestrin é um atleta de academia bem-sucedido que fez a transição para se tornar instrutor e consultor. Sua paixão e dedicação o levaram a conquistas notáveis no mundo do condicionamento físico. Hoje, ele compartilha seu conhecimento e experiência, ajudando outras pessoas a atingirem seus objetivos de condicionamento físico. Seu legado é uma inspiração para aqueles que buscam uma vida mais saudável e ativa.
+                        </p>
+                         
+                    </div>
+    
+                    <div class="referencia_renato_botao">
+                        <a class="btn-renato" href="https://www.youtube.com/Julio Balestrin"> <img src="../static/imagens/youtube_icon.svg" alt="Yotube" width="70px" height="70px" ></a>
+                    </div>
+                
+                </div>
+                
+            
+            </div>
+
+
+            <script>
+                const botoes = document.querySelectorAll(".referencias-btn");
+        const cards = document.querySelectorAll(".comece_referencias_renato, .comece_referencias_julio");
+
+        botoes.forEach(botao => {
+            botao.addEventListener("click", function() {
+                const alvo = this.getAttribute("href").substring(1); // Remove o "#" do href
+                cards.forEach(card => {
+                    card.style.display = card.id === alvo ? "block" : "none";
+                });
+            });
+        });
+
+            </script>
+            
+       
+       
+       
+           </section>
+
+       
+    
+    </div>
+
 
 </div>
 

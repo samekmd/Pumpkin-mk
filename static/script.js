@@ -1,4 +1,4 @@
-alert("The page is reloading")
+
 
 //Inicop do Carousel 
 var radio = document.querySelector('.manual-btn')

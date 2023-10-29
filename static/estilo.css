@@ -1,5 +1,5 @@
 /* Tabela de cor https://coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08 */
-
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B);
 /* Corpo da página */
 :root{
     
@@ -20,6 +20,7 @@ body{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+    /* background:linear-gradient(); */
   }
     /* Fim */
 
@@ -656,9 +657,11 @@ section.slider{
   border-radius: 5px;
   margin-top: 75px;
   margin-left:2% ;
+  cursor: pointer;
 }
 .custom-dropdown li{
   list-style-type: none;
+ 
 }
 
 .custom-dropdown .dropdown-toggle {
@@ -706,38 +709,283 @@ section.slider{
 /* Fim do Dropdown Bootsrap */
 
 /* Inicio do Conteúdo do dropdown */
-.conteudo_instrutores_dropdown{
-  /* width: 80%; */
+
+
+.comece_conteudo_geral
+{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-left: 15%;
+   margin-top: 5%;
+   border: 0px solid red
+}
+
+.comece_instrutores
+{
   display: flex;
   flex-direction: row;
-  float: left;
-  margin-left:50%;
-  margin-bottom: 10%;
+  flex-wrap: wrap;
+   width: 1000px;
+   height: 600px;
+   border: 2px solid #03071E;
+   border-radius: 10px;
+   margin-bottom: 3%;
+   background-color: #E85D04;
+   text-align: center;
+   align-items: center;
+   
+}
+
+.comece_referencias_renato
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+   width: 1000px;
+   height: 600px;
+   border: 2px solid #03071E;
+   border-radius: 10px;
+   margin-bottom: 3%;
+   background-color: #E85D04;
+   text-align: center;
+   align-items: center;
 
 }
 
-.conteudo_cursos_dropdown{
+.comece_referencias_julio
+{
   display: flex;
   flex-direction: row;
-  float: left;
-  margin-left:50%;
-  margin-bottom: 10%;
+  flex-wrap: wrap;
+   width: 1000px;
+   height: 600px;
+   border: 2px solid #03071E;
+   border-radius: 10px;
+   margin-bottom: 3%;
+   background-color: #E85D04;
+   text-align: center;
+   align-items: center;
 
 }
-
-.conteudo_consultoria_dropdown{
-  display: flex;
-  flex-direction: row;
-  float: left;
-  margin-left:50%;
-  margin-bottom: 10%;
-
-}
-
 
 
 /* Fim do Conteúdo do dropdown */
 
+/* Começo da Barra de Pesquisar da Página Comece */
+.search-box
+{
+  position: absolute;
+  top: 37.4%;
+  background-color: #D00000;
+  height: 40px;
+  padding: 10px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+::-webkit-input-placeholder{
+  color: #9D0208;
+}
+
+.search-txt
+{
+  border:none;
+  background: none;
+  outline:none;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  width: 0;
+  transition: 0.5s;
+  font-family: 'Open Suns';
+}
+
+.search-btn
+{
+  width: 40px;
+  height: 40px;
+  border-radius:50% ;
+  background: #D00000 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.search-box:hover > .search-txt{
+  width: 240px;
+  padding: 0 6px;
+  
+}
+
+.search-box:hover > .search-btn{
+  background-color: #fff;
+}
+
+
+
+/* Fim da Barra de Pesquisar  */
+
+
+/* Inicio do conteudo do Instrutores */
+.foto_perfil{
+  position: absolute;
+  margin-left:55% ;
+  margin-bottom: 25%;
+ 
+}
+
+.sobre_instrutores_cont{
+  display: flex;
+  position: absolute;
+  width: 45%;
+  text-align: justify;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 1%;
+  margin-bottom: 17%;
+}
+
+.sobre_instrutores_title{
+  margin-bottom:50% ;
+  margin-left: 2%;
+
+}
+
+.comece_botoes{
+  
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 240px;
+  margin-top: 37%;
+  margin-left: 25%;
+}
+
+.comece_botoes a{
+  text-decoration: none ;
+  color: #fff;
+}
+
+.intrutores-btn{
+  width: 100px;
+  height: 40px;
+  background-color: #6A040F;
+  border-radius: 5px;
+  border: 2px solid #03071E;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intrutores-btn:hover{
+  background-color: #D00000;
+  transition: .2s;
+}
+
+
+
+/* Fim dos Instrutores */
+
+/* Começo das Referencias */
+.referencias_botoes_ref{
+  
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  margin-bottom: 3%;
+ 
+}
+
+.referencias_botoes_ref a{
+  text-decoration: none ;
+  color: #fff;
+}
+
+.referencias-btn{
+  width: 120px;
+  height: 40px;
+  background-color: #6A040F;
+  border-radius: 5px;
+  border: 2px solid #03071E;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.referencias-btn:hover{
+  background-color: #D00000;
+  transition: .2s;
+}
+
+.conteudo-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.comece_referencias_renato,
+.comece_referencias_julio {
+  display: none;
+}
+
+.sobre_referencias_cont{
+  display: flex;
+  position: absolute;
+  width: 45%;
+  text-align: justify;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 1%;
+  margin-top: 2% ;
+
+}
+
+
+
+.foto_perfil_renato{
+  position: absolute;
+  margin-left:50% ;
+  margin-top: 5%;
+
+  
+}
+
+  .foto_perfil_julio{
+    position: absolute;
+    margin-left:50% ;
+    margin-top: 5%;
+
+  }
+
+.sobre_referencias_title{
+    margin-right: 90%;
+    margin-top: 2%;
+ 
+
+}
+
+.referencia_renato_botao{
+  position: absolute;
+  margin-top: 32%;
+  margin-left: 30%;
+}
+
+
+
+
+
+/* Fim das Referencias */
 
 /* Fim da página Comece */
 
