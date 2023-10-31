@@ -29,7 +29,7 @@ body{
     /* Inicio do Menu */
 
 
-#menu_nav{
+  #menu_nav{
     
      display: flex;
     flex-direction: row;
@@ -37,7 +37,10 @@ body{
     justify-content: center;
     padding: 0;
     background-color: black;
-    border: 0px solid red; 
+    border: 0px solid red;
+    height: 100px;
+    width: 100%;
+    
 
 }
 #menu_nav a{
@@ -46,17 +49,36 @@ body{
 }
 .links{
     width: 50%;
-    height: 10%;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     margin-right: 10%;
-    margin-top: 1.5%;
+    margin-top: 3%;
     border: 0px solid red; 
 }
 .link_bootstrap{
- margin-top: 0.9%;
+ margin-top: 2.5%;
 }
+
+ 
+ #logo img{
+ position: absolute;
+ margin-right: 35%;
+ display: flex;
+  flex-direction: row;
+  border: 0px solid red;
+
+  
+} 
+
+
+
+
+
+
+
+
 
 
 
