@@ -46,31 +46,46 @@ body{
 #menu_nav a{
     text-decoration: none;
     color: #ffffff;
+   
 }
 .links{
     width: 50%;
+    
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin-right: 10%;
-    margin-top: 3%;
+  
     border: 0px solid red; 
 }
-.link_bootstrap{
- margin-top: 2.5%;
+
+.links a{
+  font-size: 20px;
 }
 
- 
- #logo img{
- position: absolute;
- margin-right: 35%;
- display: flex;
-  flex-direction: row;
-  border: 0px solid red;
 
+.link_bootstrap{
+
+ padding-left: 10% ;
+}
+
+.todos_os_links{
+  width: 50%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 30%;
+}
+
+.logo{
+  position: absolute;
+  margin-right: 90%;
   
-} 
+  
+}
 
 
 
@@ -87,7 +102,7 @@ body{
     --bs-btn-padding-x: 0.75rem;
     --bs-btn-padding-y: 0.375rem;
     --bs-btn-font-family: ;
-    --bs-btn-font-size: 1rem;
+    --bs-btn-font-size: 20px;
     --bs-btn-font-weight: 400;
     --bs-btn-line-height: 1.5;
     --bs-btn-color: var(--bs-body-color);
@@ -117,7 +132,11 @@ body{
     border-radius: var(--bs-btn-border-radius);
     background-color: var(--bs-btn-bg);
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border: 1px;
+    border-radius: 10px;
   }
+
+
   @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
@@ -224,20 +243,68 @@ section.slider{
   height: 500px;
   display: flex;
   flex-direction: row;
-  text-align: center;
-  align-items: center;
+  
+}
+
+.slide h1{
+  position: absolute;
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     align-content: center;
+     height: 50px;
+     margin-left: 36%;
+    margin-top: 2%;
+    color: white;
+}
+
+.slide p{
+  display: flex;
   justify-content: center;
+  text-align: justify;
+  align-items: center;
+  margin-left: 27%;
+  margin-top: 15%;
+  width: 40%;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .slide_meio{
   background-color: #9D0208;
   height: 500px;
   display: flex;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+ 
 
+}
+
+.slide_meio h1{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  height: 50px;
+  margin-left: 34%;
+ margin-top: 2%;
+ color: white;
+
+}
+
+.conteudo_slide_meio{
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align:left;
+  justify-content: left;
+ margin-left: 32%;
+  margin-top:10%;
+  width: 40%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .nav-manual, .nav-auto{
@@ -322,8 +389,14 @@ section.slider{
   margin-top: 2%;
 
 }
+
+.biotipos_intro p{
+  font-size: 18px;
+  color: #fff;
+}
 .introducao_biotipos p{
   color: #fff;
+  font-size: 20px;
  
 }
 
@@ -372,12 +445,18 @@ section.slider{
   border-radius: 10px;
   border: 2px solid #03071E;
   display: flex;
-  flex-direction: row;
-  text-align: center;
+  flex-direction: column;
+ 
   align-items: center;
   justify-content: center;
 }
-
+.card_bio p{
+  display: flex;
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  width: 50%;
+}
 .card_bio_meio{
   background-color: #9D0208;
   height: 400px;
@@ -385,11 +464,19 @@ section.slider{
   border-radius: 10px;
   border: 2px solid #03071E;
   display: flex;
-  flex-direction: row;
-  text-align: center;
+  flex-direction: column;
+  
   align-items: center;
   justify-content: center;
 
+}
+
+.card_bio_meio p{
+  display: flex;
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  width: 50%;
 }
 
 
@@ -802,7 +889,12 @@ section.slider{
    align-items: center;
 
 }
-
+.comece_intro{
+  color: black;
+  font-size: 18px ;
+  width: 90%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 /* Fim do Conteúdo do dropdown */
 
@@ -810,7 +902,7 @@ section.slider{
 .search-box
 {
   position: absolute;
-  top: 40%;
+  top: 45%;
   background-color: #D00000;
   height: 40px;
   padding: 10px;
