@@ -5,7 +5,7 @@
     
   --color-neutral-10: black;
  
-  --color-neutral-40: #f5f5f5;
+  --color-neutral-40: #ffffff;
 }
 
 *{
@@ -21,7 +21,7 @@ body{
     flex-wrap: nowrap;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-     background:linear-gradient(45deg,#dcdcdd,#c0c0c0); 
+     background:linear-gradient(45deg,#ffffff,#ffbf69); 
   }
     /* Fim */
 
@@ -242,7 +242,7 @@ section.slider{
   background-color: #E85D04;
   height: 500px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   
 }
 
@@ -253,18 +253,19 @@ section.slider{
      text-align: center;
      align-content: center;
      height: 50px;
-     margin-left: 36%;
+     margin-left: 38%;
     margin-top: 2%;
     color: white;
 }
 
 .slide p{
   display: flex;
+   
   justify-content: center;
   text-align: justify;
   align-items: center;
-  margin-left: 27%;
-  margin-top: 15%;
+  margin-left: 30%;
+  margin-top: 10%;
   width: 40%;
   height: 50px;
   color: white;
@@ -288,11 +289,13 @@ section.slider{
   text-align: center;
   align-content: center;
   height: 50px;
-  margin-left: 34%;
+  margin-left: 36%;
  margin-top: 2%;
  color: white;
 
 }
+
+
 
 .conteudo_slide_meio{
   color: white;
@@ -446,7 +449,7 @@ section.slider{
   border: 2px solid #03071E;
   display: flex;
   flex-direction: column;
- 
+  margin-bottom: 8%;
   align-items: center;
   justify-content: center;
 }
@@ -465,7 +468,7 @@ section.slider{
   border: 2px solid #03071E;
   display: flex;
   flex-direction: column;
-  
+  margin-bottom: 8%;
   align-items: center;
   justify-content: center;
 
