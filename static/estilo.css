@@ -56,7 +56,7 @@ body{
     justify-content: space-between;
     flex-direction: row;
   
-    border: 0px solid red; 
+    border: 0px solid red;  
 }
 
 .links a{
