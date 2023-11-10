@@ -2,15 +2,32 @@
 
 {% block main %}
 
-<div class="tela_login">
-    <h1> Login </h1>
-    <br>
-    <input type="text" placeholder="Nome">
-    <br><br>
-    <input type="password" placeholder="Senha">
-    <br><br>
-    <button>Enviar</button>
-</div>
-   
+<form method="post" action="/login">
+    
+    <div class="tela_login">
+        <h1> Login </h1>
+        <br>
+        <input type="text" placeholder="Nome" name="nome" required>
+        <br><br>
+        <input type="password" placeholder="Senha" name="senha" required>
+        <br><br>
+        <button>Enviar</button>
+    </div>
+
+</form>   
 
 {% endblock %}
+
+
+<!-- create database login;
+use login;
+create table login
+(
+    nome varchar(60), 
+    senha varchar(60)
+);
+
+SELECT * FROM login;
+
+INSERT INTO login (nome,senha)
+VALUES ('samuel', 'Flask-DB', 'HTML, CSS, MySQL'); -->
