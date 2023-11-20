@@ -2,9 +2,10 @@
 
 {% block main %}
 
-<form method="post" action="/login">
+
     
     <div class="tela_login">
+<form method="POST" action="/Login">
         <h1> Login </h1>
         <br>
         <input type="text" placeholder="Nome" name="nome" required>
@@ -18,8 +19,8 @@
 
 {% endblock %}
 
-
-<!-- create database login;
+<!-- 
+create database login;
 use login;
 create table login
 (

@@ -1,16 +1,30 @@
-from flask import Flask, render_template, request, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask_mysqldb import MySQL 
+# from flask_login import LoginManager
+# from flask_sqlalchemy import SQLAlchemy
 
-# from flask_mysqldb import MySQL  
 
-# app.config['MYSQL_Host'] = 'localhost'
-# app.config['MYSQL_USER'] = 'root'
-# app.config['MYSQL_PASSWORD'] = '1938'
-# app.config['MYSQL_DB'] = 'login'
 
-# mysql = MySQL(app)
+
+
 
 
 app = Flask('__name__')
+
+
+
+mysql = MySQL(app)
+
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:secret@localhost/login'
+app.config['MYSQL_Host'] = 'localhost' 
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'fatec'
+app.config['MYSQL_DB'] = 'login'
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+
+
+# login_manager = LoginManager(app)
+# db = SQLAlchemy(app)
 
 @app.route('/')
 def index():
@@ -26,17 +40,21 @@ def consultoria():
 
 @app.route('/Login', methods=('GET', 'POST'))
 def login():
-    # if request.method == 'POST': 
-    #         nome = request.method['nome']
-    #         senha = request.method['senha']
-    #         cur = mysql.connection.cursor()
-    #         cur.execute("INSERT INTO login(nome,senha), VALUES (%s, %s)",(nome,senha))
+    if request.method == 'POST': 
+            nome = request.form['nome']
+            senha = request.form['senha']
+            with app.app_context():
+                cur = mysql.connection.cursor()
+                cur.execute("INSERT INTO login(nome,senha) VALUES (%s, %s)", (nome, senha))
 
-    #         mysql.connection.commit()
+                mysql.connection.commit()
             
-    #         cur.close()
-             
-    #         return 'Dados Salvos com Sucesso!'
+                cur.close()
+              
+            return render_template('dados_salvos.html')
         
     return render_template('login.html')
 
+@app.route('/dados_salvos')
+def dados_salvos():
+     return render_template('dados_salvos.html')
