@@ -55,6 +55,20 @@ def login():
         
     return render_template('login.html')
 
+
+
+@app.route('/users')
+def users():
+     cur = mysql.connection.cursor()
+
+     users = cur.execute("SELECT * FROM login")
+
+     if users > 0:
+          userDetails = cur.fetchall()
+          
+          return render_template("users.html", userDetails=userDetails) 
+          
+
 @app.route('/dados_salvos')
 def dados_salvos():
      return render_template('dados_salvos.html')
