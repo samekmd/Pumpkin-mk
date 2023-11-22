@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Users</title>
+    <link rel="stylesheet" href="../static/users.css">
 </head>
 <body>
 
-    <table id="users" class="display">
-        <thead>
+    <!-- <div class="tabela_user"> -->
+            <table id="users" class="display">
+                    <thead>
 
-            <tr>
-                <th>nome</th>
-                <th>senha</th>
-            </tr>
+                        <tr>
+                            <th>nome</th>
+                            <th>senha</th>
+                        </tr>
+                           
+                    </thead>
+                    
 
-        </thead>
+                
+            
+                        <tbody >
+                            {% for user in userDetails %}
+                            <tr class="linha_tabela">
+                            
+                                <td>{{user.nome}}</td>
+                                <td>{{user.senha}}</td>
+                            </tr>
+                                {% endfor %}
+                        </tbody>
+                </table>
+    <!-- </div>
+       -->
 
-        {% for user in userDetails %}
-      
-        <tbody>
-            <tr>
-                <td>{{user[0]}}</td>
-                <td>{{user[1]}}</td>
-                <td>{{user[2]}}</td>
-            </tr>
-        </tbody>
-
-        {% endfor %}
-
-    </table>
+    
 
 
       
