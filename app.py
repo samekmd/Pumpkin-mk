@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_mysqldb import MySQL 
+from flask_bcrypt import Bcrypt
 
 # from flask_login import LoginManager
 # from flask_sqlalchemy import SQLAlchemy
@@ -13,6 +14,7 @@ from flask_mysqldb import MySQL
 app = Flask('__name__')
 
 
+bcrypt = Bcrypt(app) 
 
 mysql = MySQL(app)
 
@@ -26,6 +28,14 @@ app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 # login_manager = LoginManager(app)
 # db = SQLAlchemy(app)
+
+
+
+
+
+
+     
+
 
 @app.route('/')
 def index():
@@ -44,9 +54,10 @@ def login():
     if request.method == 'POST': 
             nome = request.form['nome']
             senha = request.form['senha']
+            hashed_password = bcrypt.hashpw(senha, bcrypt.gensalt())
             with app.app_context():
                 cur = mysql.connection.cursor()
-                cur.execute("INSERT INTO login(nome,senha) VALUES (%s, %s)", (nome, senha))
+                cur.execute("INSERT INTO login(nome,senha) VALUES (%s, %s)", (nome, hashed_password))
 
                 mysql.connection.commit()
             
